@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lem_in.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkami <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: dholiday <dholiday@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 15:56:47 by mkami             #+#    #+#             */
-/*   Updated: 2019/09/12 15:56:48 by mkami            ###   ########.fr       */
+/*   Updated: 2019/10/01 18:12:31 by dholiday         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,19 @@ typedef struct		s_param
 	char			*str;
 	struct s_param	*next;
 }					t_param;
+
+typedef struct		s_m
+{
+	int				dudes;
+	char			*in;
+	char			*name;
+	struct s_m	**next;
+}					t_m;
+
+typedef struct		s_all
+{
+	int				rooms;
+}					t_all;
 
 typedef struct		s_razriad
 {

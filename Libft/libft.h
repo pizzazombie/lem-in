@@ -6,7 +6,7 @@
 /*   By: dholiday <dholiday@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 20:35:01 by dholiday          #+#    #+#             */
-/*   Updated: 2019/07/31 18:59:51 by dholiday         ###   ########.fr       */
+/*   Updated: 2019/10/01 18:06:43 by dholiday         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdarg.h>
-# define BUFF_SIZE 30
+# define BUFF_SIZE 1000000
 # define ABS(Value) ((Value > 0) ? (Value) : (-Value))
 
 typedef struct	s_list
