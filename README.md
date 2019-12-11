@@ -4,7 +4,7 @@ School 21 project: take the map from standart input and move "ants" across the m
 
 
 
-[`lem-in.en.pdf`](/tools/lem-im.en.pdf) is the task file.
+[`lem-in.en.pdf`](/tools/lem-in.en.pdf) is the task file.
 
 example of map:
 ![lem-in test map](/tools/cat_test.png)
