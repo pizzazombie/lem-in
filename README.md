@@ -21,6 +21,6 @@ example of output:
 visualisation:
 you need to install python3 for visualisation
 
-usage: ./lem-in [-i] < <filename> | python3 test.py
+usage: ./lem-in [-i] < \<filename\> | python3 test.py
 
 ![lem-in visualisation](/tools/rooms.png)
