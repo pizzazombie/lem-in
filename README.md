@@ -7,7 +7,7 @@ simply clone the repository and do make:
 
 git clone https://github.com/pizzazombie/lem-in.git\ ; cd lem-in ; make
 
-Usage: ./lem-in [-i] < "<filename>"
+Usage: ./lem-in [-i] < /<filename/>
   
   
 [`lem-in.en.pdf`](/tools/lem-in.en.pdf) is the task file.
