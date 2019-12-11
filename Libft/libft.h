@@ -6,7 +6,7 @@
 /*   By: dholiday <dholiday@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 20:35:01 by dholiday          #+#    #+#             */
-/*   Updated: 2019/10/01 18:06:43 by dholiday         ###   ########.fr       */
+/*   Updated: 2019/12/04 16:02:30 by dholiday         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdarg.h>
-# define BUFF_SIZE 1000000
+# define BUFF_SIZE 30
 # define ABS(Value) ((Value > 0) ? (Value) : (-Value))
 
 typedef struct	s_list
@@ -30,6 +30,7 @@ typedef struct	s_list
 }				t_list;
 
 int				ft_str_is_alpha(char *str);
+int				ft_str_is_digit(char *str);
 t_list			*ft_list_last(t_list *begin_list);
 int				ft_list_size(t_list *begin_list);
 void			ft_list_push_back(t_list *begin_list, t_list *new);
@@ -92,6 +93,8 @@ void			ft_putnbr(int n);
 void			ft_putchar(char c);
 void			ft_putstr(char const *str);
 void			ft_putendl(char const *str);
+char			**ft_splitwhitespaces(char const *str);
+void			ft_clean_mass(char **mass);
 
 int				get_next_line(const int fd, char **line);
 

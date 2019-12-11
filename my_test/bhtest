@@ -1,0 +1,22 @@
+#kmfgldsfgk
+##klnfgsd
+5
+##start
+a 1 2
+b 4 5
+c 1 4
+d 7 8
+e 8 6
+f 7 7
+g 3 3
+##end
+h 10 10
+a-b
+b-c
+c-d
+e-d
+e-f
+f-g
+#kmfgldsfgk
+##klnfgsd
+g-h

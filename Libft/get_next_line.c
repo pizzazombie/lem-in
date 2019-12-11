@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line1.c                                   :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dholiday <dholiday@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:33:57 by dholiday          #+#    #+#             */
-/*   Updated: 2019/07/31 19:46:17 by dholiday         ###   ########.fr       */
+/*   Updated: 2019/11/04 21:39:47 by dholiday         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-static int		ft_chit(int fd, void **str)
+int		ft_chit(int fd, void **str)
 {
 	int		i;
 	void	*new;
@@ -34,7 +37,7 @@ static int		ft_chit(int fd, void **str)
 	return (0);
 }
 
-static void		ft_record(t_list *a, int *f, int fd, char **line)
+void	ft_record(t_list *a, int *f, int fd, char **line)
 {
 	int		i;
 	int		len;
@@ -63,7 +66,7 @@ static void		ft_record(t_list *a, int *f, int fd, char **line)
 		a->content = ft_memmove(new, new + i + 1, len - i);
 }
 
-static t_list	*ft_list(t_list *new, int fd)
+t_list	*ft_list(t_list *new, int fd)
 {
 	if (new != NULL)
 	{
@@ -76,22 +79,18 @@ static t_list	*ft_list(t_list *new, int fd)
 		{
 			new->next = ft_lstnew((void*)"", 1);
 			new = new->next;
-			if (new == NULL)
-				return (NULL);
 			new->content_size = fd;
 		}
 	}
 	else
 	{
 		new = ft_lstnew((void*)"", 1);
-		if (new == NULL)
-			return (NULL);
 		new->content_size = fd;
 	}
 	return (new);
 }
 
-int				get_next_line(const	int fd, char **line)
+int		get_next_line(const	int fd, char **line)
 {
 	static t_list	*new;
 	t_list			*a;
@@ -104,8 +103,6 @@ int				get_next_line(const	int fd, char **line)
 		return (-1);
 	a = new;
 	new = ft_list(new, fd);
-	if (new == NULL)
-		return (-1);
 	ft_record(new, &f, fd, line);
 	if (a != NULL)
 		new = a;

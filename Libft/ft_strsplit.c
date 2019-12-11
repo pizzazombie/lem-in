@@ -6,7 +6,7 @@
 /*   By: dholiday <dholiday@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 21:52:18 by dholiday          #+#    #+#             */
-/*   Updated: 2019/05/22 17:14:44 by dholiday         ###   ########.fr       */
+/*   Updated: 2019/11/04 16:09:04 by dholiday         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int		slovo(char **s, char const *str, char c)
 		{
 			while (str[i] != c && str[i++] != '\0')
 				j++;
-			s[k] = (char*)malloc(sizeof(**s) * (j + 1));
+			s[k] = (char*)malloc(sizeof(char) * (j + 1));
 			if (!(s[k]))
 			{
 				del(s, k);
@@ -87,7 +87,7 @@ char			**ft_strsplit(char const *str, char c)
 	if (!(str))
 		return (NULL);
 	sum = ft_sum_w(str, c);
-	s = (char**)malloc(sizeof(*s) * (sum + 1));
+	s = (char**)malloc(sizeof(char *) * (sum + 1));
 	if (!(s))
 		return (NULL);
 	if (!(slovo(s, str, c)))

@@ -6,7 +6,7 @@
 #    By: dholiday <dholiday@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/02 17:03:41 by tguillem          #+#    #+#              #
-#    Updated: 2019/08/05 16:02:46 by dholiday         ###   ########.fr        #
+#    Updated: 2019/11/04 14:16:22 by dholiday         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC = gcc
 SRC = ft_sum_w.c ft_list_push_back.c ft_bzero.c \
 	  ft_isascii.c ft_list_size.c \
 	  ft_isalpha.c ft_list_last.c \
-	  ft_isalnum.c ft_str_is_alpha.c \
+	  ft_isalnum.c ft_str_is_alpha.c ft_str_is_digit.c \
 	  ft_isdigit.c \
 	  ft_isprint.c \
 	  ft_memchr.c \
@@ -54,7 +54,7 @@ SRC = ft_sum_w.c ft_list_push_back.c ft_bzero.c \
 	  ft_lstdel.c ft_lstmap.c get_next_line.c \
 	  all_types.c convert.c find_null_d_sharp.c format.c ft_printf.c \
 	  helper_2.c helpers.c info.c new_printf.c null.c sharp.c swap_str.c type_f.c wide_dioux.c \
-	  wide_p.c wide_s.c
+	  wide_p.c wide_s.c ft_splitwhitespaces.c ft_clean_mass.c 
 #SRC := $(addprefix , $(SRC))
 OBJ = $(SRC:%.c=%.o)
 
